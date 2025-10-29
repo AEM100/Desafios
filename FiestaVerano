@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class FiestaVerano {
+
+    public static long gcd(long a, long b) {
+        return (b == 0) ? a : gcd(b, a % b);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long mesas;
+        long total=0;
+    
+        
+        while(sc.hasNext()){
+            long siguientenum=sc.nextLong();
+            if(siguientenum==0){
+                break;
+            }
+            total=siguientenum;
+            long mcd = siguientenum;
+            while (true) {
+                long siguiente = sc.nextLong();
+
+                if (siguiente == 0){
+                    break;
+                }
+
+                total += siguiente;
+                mcd = gcd(mcd, siguiente);
+            }
+           
+            mesas = total/mcd;
+            
+            System.out.println(mesas);
+            mesas=0;
+            
+        }
+    
+    }
+}
