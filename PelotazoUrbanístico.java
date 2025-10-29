@@ -10,10 +10,12 @@ siempre que todas sean iguales y cubran el terreno completo sin dejar espacio si
 import java.util.Scanner;
 
 public class PelotazoUrbanístico {
-
+  
+    /*Recursividad*/
     public static long gcd(long a, long b) {
         return (b == 0) ? a : gcd(b, a % b);
     }
+  
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);
